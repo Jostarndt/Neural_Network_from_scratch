@@ -1,14 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
-
-
-# In[11]:
-
 
 class neuron:
     output = False
@@ -29,10 +21,7 @@ class neuron:
         else:
             self.local_error = (1 - np.tanh(self.pre_func_value)**2)
         return self.local_error 
-
-
-# In[31]:
-
+    
 
 class layer:
     neurons = 0
@@ -79,13 +68,8 @@ class layer:
     def update_weight(self, stepsize):
         self.Weights = self.Weights - stepsize * self.gradients
         return 0
-            
-        
 
-
-# In[60]:
-
-
+    
 class MLP:
     layer = []
     layers = 0
@@ -128,29 +112,14 @@ class MLP:
         self.update_weights()
         return 0
 
-
-# In[61]:
-
-
+#Create a Multilayer perceptron with 3 layers with 2,5,1 neurons. Input data has size 4.
 A = MLP(3, [2,5,1], 4)
 Data = [9,8,7,6]
+
+#Run the Neuronal Network
 print(A.run(Data))
 
-
-# In[83]:
-
-
+#Train the neuronal Network
 A.training(Data,1)
 
-
-# In[84]:
-
-
 A.run(Data)
-
-
-# In[ ]:
-
-
-
-
