@@ -1,4 +1,4 @@
-# Neuronal Network from cratch
+# Neuronal Network from scratch
 
 
 To get a better understanding of Neuronal Networks I programmed this Neuronal Network form scratch (just using NumPy) with an implemented backporpagation and a gradient-descent function.
